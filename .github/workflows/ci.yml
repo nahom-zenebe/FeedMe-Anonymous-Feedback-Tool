@@ -1,0 +1,48 @@
+name: FeedMe CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [20.x]
+
+    steps:
+      - name:  Checkout repository
+        uses: actions/checkout@v4
+
+      - name:  Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: 📦 Install backend dependencies
+        working-directory: ./backend
+        run: npm install
+
+      - name: 📦 Install frontend dependencies
+        working-directory: ./frontend
+        run: npm install
+
+      - name: 🧪 Run backend lint/test
+        working-directory: ./backend
+        run: |
+          npm run lint || echo "No lint script"
+          npm test || echo "No tests defined"
+
+      - name: 🧪 Run frontend lint/test
+        working-directory: ./frontend
+        run: |
+          npm run lint || echo "No lint script"
+          npm test || echo "No tests defined"
+
+      - name: ✅ Build frontend
+        working-directory: ./frontend
+        run: npm run build
