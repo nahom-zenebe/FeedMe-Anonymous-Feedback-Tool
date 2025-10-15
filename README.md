@@ -33,6 +33,8 @@ It’s simple, privacy-focused, and perfect for teachers, managers, creators, or
 ---
 
 ## 🧩 Project Structure
+bash 
+```
 
 feedme/
 │
@@ -67,4 +69,5 @@ feedme/
 │   └── package.json
 │
 └── README.md
+```
 ---
