@@ -1,6 +1,10 @@
-# 📨 FeedMe – Anonymous Feedback Tool
+# 📨 FEEDBACK.LY – Anonymous Feedback Tool
 
-FeedMe is an open-source **MERN stack** web application that allows users to **collect anonymous feedback** through a **unique shareable link**.  
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/0251eded-352f-4245-bbf9-a5bf6b8c0678" width="461" height="202" alt="Screenshot 2025-10-15 at 8 26 41 PM" />
+</p>
+
+Feedback.ly is an open-source **MERN stack** web application that allows users to **collect anonymous feedback** through a **unique shareable link**.  
 It’s simple, privacy-focused, and perfect for teachers, managers, creators, or developers who want honest feedback without judgment.
 
 ---
