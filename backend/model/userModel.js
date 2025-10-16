@@ -6,7 +6,6 @@ import mongoose, { Schema }  from "mongoose";
 const userSchema=new mongoose.Schema({
     username:{
         type:String,
-        required:true,
         unique:true
     },
     name:{
@@ -22,10 +21,7 @@ const userSchema=new mongoose.Schema({
         type:String,
         required:true
     },
-    isAdmin:{
-        type:Boolean,
-        default:false
-    },
+    
     profilepic:{
         type:String,
         default:""
@@ -33,4 +29,6 @@ const userSchema=new mongoose.Schema({
 },{timestamps:true}
 )
 
-const User=mongoose.model('User',userSchema)
+const User = mongoose.model("User", userSchema);
+
+export default User;
